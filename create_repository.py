@@ -81,7 +81,7 @@ def save_command_to_update_sh():
   command_line = " ".join(shlex.quote(arg) for arg in command_args)
 
   # update.shに書き込む内容を作成
-  script_content = f"""#!/bin/bash
+  script_content = f"""#!/bin/sh
 # 自動生成された実行スクリプト
 {command_line}
 """

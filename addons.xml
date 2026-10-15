@@ -1,18 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="repository.toskaw" name="My Custom Repository" version="1.0.0" provider-name="toskaw">
+<addons><addon id="repository.toskaw" name="Toskaw Repository" version="1.0.0" provider-name="toskaw">
     <extension point="xbmc.addon.repository" name="Kodi addon repository by toskaw">
         <dir>
             
-            <info compressed="false">https://raw.githubusercontent.com/toskaw/repository.toskaw/main/addons.xml</info>
+            <info compressed="false">https://raw.githubusercontent.com/toskaw/repository.toskaw/refs/heads/main/addons.xml</info>
             
-            <checksum>https://raw.githubusercontent.com/toskaw/repository.toskaw/main/addons.xml.md5</checksum>
+            <checksum>https://raw.githubusercontent.com/toskaw/repository.toskaw/refs/heads/main/addons.xml.md5</checksum>
             
-            <datadir zip="true">https://raw.githubusercontent.com/toskaw/repository.toskaw/main/</datadir>
+            <datadir zip="true">https://raw.githubusercontent.com/toskaw/repository.toskaw/refs/heads/main/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>My personal Kodi addon repository</summary>
+        <summary>Kodi addon repository by toskaw</summary>
         <description>This repository contains my custom video and script addons for Kodi.</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
         <platform>all</platform>
     </extension>
 </addon><addon id="script.cmcut.editor" name="CM cut editor" version="1.0.0" provider-name="toskawa">
@@ -153,7 +156,7 @@
         <summary lang="en">AbemaTV Scraper</summary>
         <description lang="en">Abema.tv + yt-dlp = ♥</description>
     </extension>
-</addon><addon id="plugin.video.abema" name="AbemaTV" version="2.2.0" provider-name="toskawa">
+</addon><addon id="plugin.video.abema" name="AbemaTV" version="2.2.1" provider-name="toskawa">
   <requires>
     <import addon="xbmc.python" version="3.0.1" />
     <import addon="script.module.inputstreamhelper" version="0.6.0" />
