@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="context.dlmanage" version="1.0.0" name="Download script manager" provider-name="toskawa">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="kodi.context.item">
+        <!-- kodi.core.main はメインの右クリックメニューに表示します -->
+        <menu id="kodi.core.main">
+            <item library="default.py">
+                <!-- メニューに表示されるテキスト -->
+                <label>30100</label>
+                <visible>ListItem.IsFolder</visible>
+            </item>
+            <item library="rename.py">
+                <!-- メニューに表示されるテキスト -->
+                <label>30101</label>
+                <visible>Window.IsActive(videoplaylist)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <license>Unlicense</license>
+        <source>https://github.com/toskaw/</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <platform>all</platform>
+        <summary lang="ja">ダウンロード用スクリプト管理</summary>
+	<description lang="ja">dl.shの削除、プレイリストの順にエピソード番号付けを行うアドオンです。コンテキストメニューで起動します</description>
+    </extension>
+</addon>

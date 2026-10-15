@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="repository.toskaw" name="My Custom Repository" version="1.0.0" provider-name="toskaw">
+    <extension point="xbmc.addon.repository" name="Kodi addon repository by toskaw">
+        <dir>
+            
+            <info compressed="false">https://raw.githubusercontent.com/toskaw/repository.toskaw/main/addons.xml</info>
+            
+            <checksum>https://raw.githubusercontent.com/toskaw/repository.toskaw/main/addons.xml.md5</checksum>
+            
+            <datadir zip="true">https://raw.githubusercontent.com/toskaw/repository.toskaw/main/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>My personal Kodi addon repository</summary>
+        <description>This repository contains my custom video and script addons for Kodi.</description>
+        <platform>all</platform>
+    </extension>
+</addon><addon id="script.cmcut.editor" name="CM cut editor" version="1.0.0" provider-name="toskawa">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.simplejson" version="2.0.10" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+
+      <platform>all</platform>
+      <summary lang="en">Create EDL files to skip content.</summary>
+      <language />
+      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+      <forum />
+      <source />
+      <email />
+      <disclaimer lang="en" />
+      <assets>
+	<icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+</addon><addon id="script.module.yt-dlp" name="yt-dlp" version="2026.08.19-1" provider-name="yt-dlp contributors">
+
+    <requires>
+        <import addon="xbmc.python" version="3.0.1" />
+        <import addon="script.module.certifi" version="2023.5.7" />
+    </requires>
+
+    <extension point="xbmc.python.module" library="lib" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A youtube-dl fork with additional features and patches</summary>
+        <description lang="en_GB">yt-dlp is a youtube-dl fork based on the now inactive youtube-dlc. The main focus of this project is adding new features and patches while also keeping up to date with the original project</description>
+        <license>Unlicense</license>
+        <platform>all</platform>
+        <source>https://github.com/yt-dlp/yt-dlp</source>
+    </extension>
+
+</addon><addon id="plugin.video.tver" name="TVer" version="1.0.0.0" provider-name="toskaw">
+  
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.inputstreamhelper" version="0.6.0" />
+    <import addon="script.module.requests" version="2.27.1" />
+    <import addon="script.module.yt-dlp" version="2026.08.19-1" />
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+      <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.service" library="service.py" />
+
+  <extension point="xbmc.addon.metadata">
+        <license>Unlicense</license>
+        <platform>all</platform>
+        <source>https://github.com/kuriho/</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary lang="en">TVer Addon</summary>
+        <description lang="en">TVer.jp + yt-dlp = ♥</description>
+    </extension>
+</addon><addon id="context.dlmanage" version="1.0.0" name="Download script manager" provider-name="toskawa">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="kodi.context.item">
+        
+        <menu id="kodi.core.main">
+            <item library="default.py">
+                
+                <label>30100</label>
+                <visible>ListItem.IsFolder</visible>
+            </item>
+            <item library="rename.py">
+                
+                <label>30101</label>
+                <visible>Window.IsActive(videoplaylist)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <license>Unlicense</license>
+        <source>https://github.com/toskaw/</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <platform>all</platform>
+        <summary lang="ja">ダウンロード用スクリプト管理</summary>
+	<description lang="ja">dl.shの削除、プレイリストの順にエピソード番号付けを行うアドオンです。コンテキストメニューで起動します</description>
+    </extension>
+</addon><addon id="script.abemachat" name="AbemaChat" version="3.3.0" provider-name="toskawa">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.simplejson" version="2.0.10" />
+    <import addon="script.module.yt-dlp" version="2026.08.19-1" />
+    <import addon="script.module.requests" version="2.27.1" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>An Abema Chat Client</summary>
+    <description>
+      Abema chat client.
+    </description>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  </extension>
+</addon><addon id="metadata.abema.tv" name="AbemaTV" version="1.2.0" provider-name="toskawa">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.inputstreamhelper" version="0.6.0" />
+    <import addon="script.module.requests" version="2.27.1" />
+    <import addon="xbmc.metadata" version="2.1.0" />
+    <import addon="script.module.yt-dlp" version="2026.08.19-1" />
+   
+  </requires>
+
+  <extension point="xbmc.metadata.scraper.tvshows" library="scraper.py" />
+
+  <extension point="xbmc.service" library="service.py" />
+
+  <extension point="xbmc.addon.metadata">
+        <license>Unlicense</license>
+        <platform>all</platform>
+        <source>https://github.com/toskaw/</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary lang="en">AbemaTV Scraper</summary>
+        <description lang="en">Abema.tv + yt-dlp = ♥</description>
+    </extension>
+</addon><addon id="plugin.video.abema" name="AbemaTV" version="2.2.0" provider-name="toskawa">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.inputstreamhelper" version="0.6.0" />
+    <import addon="script.module.requests" version="2.27.1" />
+    <import addon="script.module.simplejson" version="2.0.10" />
+    <import addon="script.module.yt-dlp" version="2026.08.19-1" />
+    
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+      <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.service" library="service.py" />
+
+  <extension point="xbmc.addon.metadata">
+        <license>Unlicense</license>
+        <platform>all</platform>
+        <source>https://github.com/toskaw/</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary lang="en">AbemaTV Addon</summary>
+        <description lang="en">Abema.tv + yt-dlp = ♥</description>
+    </extension>
+</addon></addons>
