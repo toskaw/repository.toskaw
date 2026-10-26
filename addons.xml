@@ -40,7 +40,7 @@
 	<icon>resources/icon.png</icon>
       </assets>
     </extension>
-</addon><addon id="script.module.yt-dlp" name="yt-dlp" version="2026.08.19-1" provider-name="yt-dlp contributors">
+</addon><addon id="script.module.yt-dlp" name="yt-dlp" version="2026.10.21-1" provider-name="yt-dlp contributors">
 
     <requires>
         <import addon="xbmc.python" version="3.0.1" />
