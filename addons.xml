@@ -156,7 +156,7 @@
         <summary lang="en">AbemaTV Scraper</summary>
         <description lang="en">Abema.tv + yt-dlp = ♥</description>
     </extension>
-</addon><addon id="plugin.video.abema" name="AbemaTV" version="2.2.1" provider-name="toskawa">
+</addon><addon id="plugin.video.abema" name="AbemaTV" version="2.2.2" provider-name="toskawa">
   <requires>
     <import addon="xbmc.python" version="3.0.1" />
     <import addon="script.module.inputstreamhelper" version="0.6.0" />
